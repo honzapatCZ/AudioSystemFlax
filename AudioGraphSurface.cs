@@ -26,7 +26,7 @@ namespace AudioSystemFlax
                 TypeID = MainNodeTypeId,
                 Title = "Output",
                 Description = "The Resulting audio",
-                Flags = NodeFlags.AllGraphs | NodeFlags.NoRemove | NodeFlags.NoSpawnViaGUI | NodeFlags.NoCloseButton,
+                Flags = NodeFlags.AllGraphs | NodeFlags.NoRemove | NodeFlags.NoSpawnViaGUI | NodeFlags.NoCloseButton | NodeFlags.NoSpawnViaPaste,
                 Size = new Vector2(150, 100),
                 Elements = new[]
                 {
@@ -69,7 +69,7 @@ namespace AudioSystemFlax
             new GroupArchetype
             {
                 GroupID = MainNodeGroupId,
-                Name = "ExpressionGraph",
+                Name = "AudioGraph",
                 Color = new Color(231, 231, 60),
                 Archetypes = ExpressionGraphNodes
             },
@@ -116,13 +116,6 @@ namespace AudioSystemFlax
                 Name = "Constants",
                 Color = new Color(52, 73, 94),
                 Archetypes = FlaxEditor.Surface.Archetypes.Constants.Nodes
-            },
-            new GroupArchetype
-            {
-                GroupID = 10,
-                Name = "Flow",
-                Color = new Color(52, 73, 94),
-                Archetypes = FlaxEditor.Surface.Archetypes.Flow.Nodes
             },
             new GroupArchetype
             {
